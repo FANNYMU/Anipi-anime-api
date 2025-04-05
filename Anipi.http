@@ -1,6 +1,57 @@
 @Anipi_HostAddress = http://localhost:5235
 
-GET {{Anipi_HostAddress}}/weatherforecast/
+### Get API Info
+GET {{Anipi_HostAddress}}/api
 Accept: application/json
 
-###
+### Get Anime List (Paginated)
+GET {{Anipi_HostAddress}}/api/v1/anime?page=1&pageSize=20
+Accept: application/json
+
+### Get Anime by Source URL
+GET {{Anipi_HostAddress}}/api/v1/anime/source?url=https://myanimelist.net/anime/1
+Accept: application/json
+
+### Get Anime Types
+GET {{Anipi_HostAddress}}/api/v1/types
+Accept: application/json
+
+### Get Anime Statuses
+GET {{Anipi_HostAddress}}/api/v1/statuses
+Accept: application/json
+
+### Get Anime Seasons
+GET {{Anipi_HostAddress}}/api/v1/seasons
+Accept: application/json
+
+### Get Anime Years
+GET {{Anipi_HostAddress}}/api/v1/years
+Accept: application/json
+
+### Get Popular Anime Tags
+GET {{Anipi_HostAddress}}/api/v1/tags
+Accept: application/json
+
+### Search Anime by Title
+GET {{Anipi_HostAddress}}/api/v1/anime?title=Naruto
+Accept: application/json
+
+### Filter Anime by Type
+GET {{Anipi_HostAddress}}/api/v1/anime?type=TV
+Accept: application/json
+
+### Filter Anime by Status
+GET {{Anipi_HostAddress}}/api/v1/anime?status=FINISHED
+Accept: application/json
+
+### Filter Anime by Year and Season
+GET {{Anipi_HostAddress}}/api/v1/anime?year=2022&season=SPRING
+Accept: application/json
+
+### Filter Anime by Tag
+GET {{Anipi_HostAddress}}/api/v1/anime?tag=action
+Accept: application/json
+
+### Sort Anime (Example: by Title)
+GET {{Anipi_HostAddress}}/api/v1/anime?sortBy=title&sortDescending=false
+Accept: application/json
